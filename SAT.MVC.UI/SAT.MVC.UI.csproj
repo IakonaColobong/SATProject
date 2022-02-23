@@ -183,10 +183,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="_Archive\OriginalContent\bootstrap-theme.css" />
+    <Content Include="_Archive\OriginalContent\bootstrap-theme.min.css" />
+    <Content Include="_Archive\OriginalContent\bootstrap.css" />
+    <Content Include="_Archive\OriginalContent\bootstrap.min.css" />
     <Content Include="Content\css\aos.css" />
     <Content Include="Content\css\bootstrap-datepicker.css" />
     <Content Include="Content\css\bootstrap.min.css" />
@@ -250,7 +250,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="_Archive\OriginalContent\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\respond.js" />
@@ -597,10 +597,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="_Archive\OriginalContent\bootstrap.min.css.map" />
+    <Content Include="_Archive\OriginalContent\bootstrap.css.map" />
+    <Content Include="_Archive\OriginalContent\bootstrap-theme.min.css.map" />
+    <Content Include="_Archive\OriginalContent\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
