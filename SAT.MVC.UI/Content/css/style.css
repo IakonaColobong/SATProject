@@ -1093,3 +1093,11 @@ h1, h2, h3, h4, h5,
 .intro-section.carouselImage2 {
     background-image: url('/Content/images/hero_1.jpg');
 }
+
+#mainContent {
+    height: 150px;
+}
+
+h2 {
+    text-align: center;
+}
