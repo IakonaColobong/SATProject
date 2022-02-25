@@ -10,11 +10,14 @@ using SAT.DATA.EF;
 
 namespace SAT.MVC.UI.Controllers
 {
+    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Scheduler")]
     public class EnrollmentsController : Controller
     {
         private SATEntities db = new SATEntities();
 
         // GET: Enrollments
+      
         public ActionResult Index()
         {
             var enrollments = db.Enrollments.Include(e => e.ScheduledClass).Include(e => e.Student);
@@ -22,6 +25,7 @@ namespace SAT.MVC.UI.Controllers
         }
 
         // GET: Enrollments/Details/5
+   
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +41,7 @@ namespace SAT.MVC.UI.Controllers
         }
 
         // GET: Enrollments/Create
+       
         public ActionResult Create()
         {
             ViewBag.ScheduledClassId = new SelectList(db.ScheduledClasses, "ScheduledClassId", "InstructorName");
@@ -49,6 +54,7 @@ namespace SAT.MVC.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+       
         public ActionResult Create([Bind(Include = "EnrollmentId,StudentId,ScheduledClassId,EnrollmentDate")] Enrollment enrollment)
         {
             if (ModelState.IsValid)
@@ -63,7 +69,7 @@ namespace SAT.MVC.UI.Controllers
             return View(enrollment);
         }
 
-        // GET: Enrollments/Edit/5
+  
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,6 +91,7 @@ namespace SAT.MVC.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+   
         public ActionResult Edit([Bind(Include = "EnrollmentId,StudentId,ScheduledClassId,EnrollmentDate")] Enrollment enrollment)
         {
             if (ModelState.IsValid)
@@ -99,6 +106,7 @@ namespace SAT.MVC.UI.Controllers
         }
 
         // GET: Enrollments/Delete/5
+     
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -116,6 +124,7 @@ namespace SAT.MVC.UI.Controllers
         // POST: Enrollments/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        
         public ActionResult DeleteConfirmed(int id)
         {
             Enrollment enrollment = db.Enrollments.Find(id);

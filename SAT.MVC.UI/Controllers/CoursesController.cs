@@ -10,6 +10,7 @@ using SAT.DATA.EF;
 
 namespace SAT.MVC.UI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CoursesController : Controller
     {
         private SATEntities db = new SATEntities();
@@ -21,6 +22,7 @@ namespace SAT.MVC.UI.Controllers
         }
 
         // GET: Courses/Details/5
+        
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +38,7 @@ namespace SAT.MVC.UI.Controllers
         }
 
         // GET: Courses/Create
+       
         public ActionResult Create()
         {
             return View();
@@ -46,6 +49,7 @@ namespace SAT.MVC.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        
         public ActionResult Create([Bind(Include = "CourseId,CourseName,CourseDescription,CreditHours,Curriculum,Notes,IsActive")] Course course)
         {
             if (ModelState.IsValid)
@@ -59,6 +63,7 @@ namespace SAT.MVC.UI.Controllers
         }
 
         // GET: Courses/Edit/5
+ 
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,6 +83,7 @@ namespace SAT.MVC.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+      
         public ActionResult Edit([Bind(Include = "CourseId,CourseName,CourseDescription,CreditHours,Curriculum,Notes,IsActive")] Course course)
         {
             if (ModelState.IsValid)
@@ -90,6 +96,7 @@ namespace SAT.MVC.UI.Controllers
         }
 
         // GET: Courses/Delete/5
+       
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -107,6 +114,7 @@ namespace SAT.MVC.UI.Controllers
         // POST: Courses/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+       
         public ActionResult DeleteConfirmed(int id)
         {
             Course course = db.Courses.Find(id);
