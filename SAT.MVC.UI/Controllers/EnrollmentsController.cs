@@ -10,8 +10,7 @@ using SAT.DATA.EF;
 
 namespace SAT.MVC.UI.Controllers
 {
-    [Authorize(Roles = "Admin")]
-    [Authorize(Roles = "Scheduler")]
+    [Authorize(Roles = "Admin, Scheduler") ]
     public class EnrollmentsController : Controller
     {
         private SATEntities db = new SATEntities();
